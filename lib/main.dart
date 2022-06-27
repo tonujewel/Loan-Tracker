@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:loan_tracker/screens/splash_screen/splash_screen.dart';
 
+import 'AppStyle/app_style.dart';
+import 'AppStyle/pallate.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -13,10 +16,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-
-        primarySwatch: Colors.blue,
-      ),
+      debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Palette.kToDark,
+          primaryColor: AppStyle.backgroundColor,
+        ),
       home: const SplashScreen(),
     );
   }
